@@ -10,19 +10,21 @@
         }
 
         dialog {
-            border-width: 1px;
+            border-width: .5px;
+            box-shadow: .5em .5em .5em .2em black;
+            border-radius: .2em;
             /*border-top-left-radius:     50% 30%;*/
             /*border-top-right-radius:    30% 50% ;*/
             /*border-bottom-right-radius: 50% 30%;*/
             /*border-bottom-left-radius:  30% 50%;*/
-            border-radius: 50% 30% 50% 30% /
-                           30% 50% 30% 50%;
+            /*border-radius: 50% 30% 50% 30% /*/
+            /*               30% 50% 30% 50%;*/
 
         }
         dialog::backdrop {
-            /*background-color: black;*/
-            filter: blur(5px);
-            backdrop-filter: blur(5px);
+            background-color: #00000010;
+            /*filter: blur(5px);*/
+            backdrop-filter: blur(1px);
         }
 
 
@@ -32,7 +34,7 @@
 
 <main>
 
-    <dialog id="favDialog" >
+    <dialog id="favDialog">
       <form method="dialog">
         <p><label>My favorite module is:
           <select>

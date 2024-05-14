@@ -20,9 +20,21 @@
             border-radius:      50%;
         }
         .startAnimation {
-            animation:          squash linear 1s both alternate infinite;
+            animation:          squash linear 1s alternate infinite;
         }
         @keyframes squash {
+            0% {
+                top: 0;
+                background-color:   white;
+            }
+            50% {
+                top: 80%;
+                background-color:   white;
+            }
+            100% {
+                top: 100%;
+                background-color:   blue;
+            }
 
         }
 
