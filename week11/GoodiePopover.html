@@ -13,12 +13,23 @@
         }
 
         #popover3:popover-open {
+            position: absolute;
             border-color: red;
 
             inset:    unset;
-            left: 50px;
-            top:  50px;
+            left: 0;
+            top:  1lh;
+            opacity: 0;
+            animation-name:      appear;
+            animation-delay:     1s;
+            animation-duration:  1s;
+            animation-fill-mode: forwards;
         }
+        @keyframes appear {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
     </style>
 </head>
 <body>
@@ -28,7 +39,7 @@
 <div    popover    id="my-popover">Greetings from popover=auto !</div>
 
 
-<div id="source2" popovertarget="popover2">
+<div id="source2" >
     Just some arbitrary div that has a popover on hover
 </div>
 <div popover id="popover2">Greetings toggles popover via JS !</div>
@@ -38,7 +49,7 @@
     source2.onmouseleave = _ => popover2.togglePopover();
 </script>
 
-<div id="source3" popovertarget="popover3">
+<div id="source3">
     Popover on hover but next to trigger
     <div popover id="popover3">Close popover</div>
 </div>

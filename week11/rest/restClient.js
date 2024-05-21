@@ -5,7 +5,7 @@ export { client }
  * @param   {!String} url            - Uniform Resource Locator of the endpoint. Mandatory.
  * @param   {String}  [method="GET"] - The REST method, one of GET, POST, PUT, DELETE, HEAD, OPTION. Defaults to GET.
  * @param   {?Object} [data=null]    - Optional data in case the method (e.g. POST, PUT) demands it. Will be stringified.
- * @returns {Promise<Response>}
+ * @returns {Promise<any>}
  * @example
  * client('https://jsonplaceholder.typicode.com/todos/1')
  *    .then( json => console.log(json) )
